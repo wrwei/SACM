@@ -49,7 +49,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated assurancecase -->
       <package
-            uri="http://omg.sacm/2.0/assurancecase"
+            uri="http://omg.sacm/2.2/assurancecase"
             class="assuranceCase.AssuranceCase_Package"
             genModel="model/assurancecase.genmodel"/>
    </extension>

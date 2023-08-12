@@ -7,6 +7,8 @@ import artifact.ArtifactAsset;
 import artifact.Artifact_Factory;
 import artifact.Artifact_Package;
 
+import assuranceCase.provider.AssuranceCaseEditPlugin;
+
 import base.provider.ArtifactElementItemProvider;
 
 import java.util.Collection;
@@ -16,7 +18,9 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -95,7 +99,7 @@ public class ArtifactAssetItemProvider extends ArtifactElementItemProvider {
 			getString("_UI_ArtifactAsset_type") :
 			getString("_UI_ArtifactAsset_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -141,7 +145,7 @@ public class ArtifactAssetItemProvider extends ArtifactElementItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ArtifactEditPlugin.INSTANCE;
+		return AssuranceCaseEditPlugin.INSTANCE;
 	}
 
 }

@@ -25,10 +25,6 @@ public interface Term extends ExpressionElement {
 	/**
 	 * Returns the value of the '<em><b>External Reference</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>External Reference</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>External Reference</em>' attribute.
 	 * @see #setExternalReference(String)
@@ -51,10 +47,6 @@ public interface Term extends ExpressionElement {
 	/**
 	 * Returns the value of the '<em><b>Origin</b></em>' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Origin</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origin</em>' reference.
 	 * @see #setOrigin(ModelElement)

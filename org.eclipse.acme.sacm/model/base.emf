@@ -1,4 +1,4 @@
-@namespace(uri="http://omg.sacm/2.0/base", prefix="base_")
+@namespace(uri="http://omg.sacm/2.2/base", prefix="base_")
 package base;
   abstract class Element {
   }

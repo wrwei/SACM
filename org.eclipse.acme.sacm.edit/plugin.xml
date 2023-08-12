@@ -61,7 +61,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated assurancecase -->
       <factory
-            uri="http://omg.sacm/2.0/assurancecase"
+            uri="http://omg.sacm/2.2/assurancecase"
             class="assuranceCase.provider.AssuranceCase_ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

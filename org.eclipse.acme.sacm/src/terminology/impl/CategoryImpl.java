@@ -2,12 +2,13 @@
  */
 package terminology.impl;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import terminology.Category;
 import terminology.Terminology_Package;
@@ -27,14 +28,14 @@ import terminology.Terminology_Package;
  */
 public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	/**
-	 * The cached value of the '{@link #getCategory() <em>Category</em>}' reference.
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCategory()
 	 * @generated
 	 * @ordered
 	 */
-	protected Category category;
+	protected EList<Category> category;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -60,37 +61,12 @@ public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Category getCategory() {
-		if (category != null && category.eIsProxy()) {
-			InternalEObject oldCategory = (InternalEObject)category;
-			category = (Category)eResolveProxy(oldCategory);
-			if (category != oldCategory) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Terminology_Package.CATEGORY__CATEGORY, oldCategory, category));
-			}
+	@Override
+	public EList<Category> getCategory() {
+		if (category == null) {
+			category = new EObjectResolvingEList<Category>(Category.class, this, Terminology_Package.CATEGORY__CATEGORY);
 		}
 		return category;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Category basicGetCategory() {
-		return category;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategory(Category newCategory) {
-		Category oldCategory = category;
-		category = newCategory;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Terminology_Package.CATEGORY__CATEGORY, oldCategory, category));
 	}
 
 	/**
@@ -102,8 +78,7 @@ public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case Terminology_Package.CATEGORY__CATEGORY:
-				if (resolve) return getCategory();
-				return basicGetCategory();
+				return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,11 +88,13 @@ public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Terminology_Package.CATEGORY__CATEGORY:
-				setCategory((Category)newValue);
+				getCategory().clear();
+				getCategory().addAll((Collection<? extends Category>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,7 +109,7 @@ public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Terminology_Package.CATEGORY__CATEGORY:
-				setCategory((Category)null);
+				getCategory().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,7 +124,7 @@ public class CategoryImpl extends TerminologyAssetImpl implements Category {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case Terminology_Package.CATEGORY__CATEGORY:
-				return category != null;
+				return category != null && !category.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

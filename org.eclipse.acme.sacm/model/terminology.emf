@@ -1,6 +1,6 @@
-@namespace(uri="http://omg.sacm/2.0/terminology", prefix="terminology_")
+@namespace(uri="http://omg.sacm/2.2/terminology", prefix="terminology_")
 package terminology;
-import "http://omg.sacm/2.0/base";
+import "http://omg.sacm/2.2/base";
 
   abstract class TerminologyElement extends base.ArtifactElement {
   }
@@ -25,7 +25,7 @@ import "http://omg.sacm/2.0/base";
   }
 
   class Category extends TerminologyAsset {
-  	ref Category category;
+  	ref Category[*] category;
   }
 
   abstract class ExpressionElement extends TerminologyAsset {

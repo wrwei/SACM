@@ -1,6 +1,6 @@
-@namespace(uri="http://omg.sacm/2.0/artifact", prefix="artifact_")
+@namespace(uri="http://omg.sacm/2.2/artifact", prefix="artifact_")
 package artifact;
-import "http://omg.sacm/2.0/base";
+import "http://omg.sacm/2.2/base";
 
   class ArtifactGroup extends base.ArtifactElement {
     ref base.ArtifactElement[*] artifactElement;

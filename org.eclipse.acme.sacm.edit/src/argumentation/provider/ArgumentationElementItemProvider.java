@@ -6,6 +6,8 @@ package argumentation.provider;
 import argumentation.ArgumentationElement;
 import argumentation.Argumentation_Package;
 
+import assuranceCase.provider.AssuranceCaseEditPlugin;
+
 import base.provider.ArtifactElementItemProvider;
 
 import java.util.Collection;
@@ -89,7 +91,7 @@ public class ArgumentationElementItemProvider extends ArtifactElementItemProvide
 			getString("_UI_ArgumentationElement_type") :
 			getString("_UI_ArgumentationElement_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -130,7 +132,7 @@ public class ArgumentationElementItemProvider extends ArtifactElementItemProvide
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ArgumentationEditPlugin.INSTANCE;
+		return AssuranceCaseEditPlugin.INSTANCE;
 	}
 
 }

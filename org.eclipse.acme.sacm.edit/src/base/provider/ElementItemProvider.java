@@ -3,6 +3,8 @@
 package base.provider;
 
 
+import assuranceCase.provider.AssuranceCaseEditPlugin;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -68,7 +70,7 @@ public class ElementItemProvider
 	public String getText(Object object) {
 		return getString("_UI_Element_type");
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -103,7 +105,7 @@ public class ElementItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return BaseEditPlugin.INSTANCE;
+		return AssuranceCaseEditPlugin.INSTANCE;
 	}
 
 }

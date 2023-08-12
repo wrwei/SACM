@@ -25,10 +25,6 @@ public interface ExpressionElement extends TerminologyAsset {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
@@ -52,10 +48,6 @@ public interface ExpressionElement extends TerminologyAsset {
 	 * Returns the value of the '<em><b>Category</b></em>' reference list.
 	 * The list contents are of type {@link terminology.Category}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Category</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Category</em>' reference list.
 	 * @see terminology.Terminology_Package#getExpressionElement_Category()

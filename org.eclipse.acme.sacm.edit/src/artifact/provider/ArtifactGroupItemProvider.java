@@ -6,6 +6,8 @@ package artifact.provider;
 import artifact.ArtifactGroup;
 import artifact.Artifact_Package;
 
+import assuranceCase.provider.AssuranceCaseEditPlugin;
+
 import base.provider.ArtifactElementItemProvider;
 
 import java.util.Collection;
@@ -98,7 +100,7 @@ public class ArtifactGroupItemProvider extends ArtifactElementItemProvider {
 			getString("_UI_ArtifactGroup_type") :
 			getString("_UI_ArtifactGroup_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached
@@ -133,7 +135,7 @@ public class ArtifactGroupItemProvider extends ArtifactElementItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ArtifactEditPlugin.INSTANCE;
+		return AssuranceCaseEditPlugin.INSTANCE;
 	}
 
 }

@@ -2,6 +2,7 @@
  */
 package terminology;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,29 +22,15 @@ package terminology;
  */
 public interface Category extends TerminologyAsset {
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' reference.
+	 * Returns the value of the '<em><b>Category</b></em>' reference list.
+	 * The list contents are of type {@link terminology.Category}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Category</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' reference.
-	 * @see #setCategory(Category)
+	 * @return the value of the '<em>Category</em>' reference list.
 	 * @see terminology.Terminology_Package#getCategory_Category()
 	 * @model
 	 * @generated
 	 */
-	Category getCategory();
-
-	/**
-	 * Sets the value of the '{@link terminology.Category#getCategory <em>Category</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' reference.
-	 * @see #getCategory()
-	 * @generated
-	 */
-	void setCategory(Category value);
+	EList<Category> getCategory();
 
 } // Category
