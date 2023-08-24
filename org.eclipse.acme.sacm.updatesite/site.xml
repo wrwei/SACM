@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="SACM EMF Implementation">
+      
+   </description>
+   <feature url="features/org.eclipse.acme.sacm.feature_1.0.0.0.jar" id="org.eclipse.acme.sacm.feature" version="1.0.0.0"/>
+</site>
